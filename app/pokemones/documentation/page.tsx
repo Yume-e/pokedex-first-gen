@@ -74,7 +74,6 @@ export default function Documentation() {
 			<footer className="mt-12 bg-white shadow-xl rounded-2xl p-8 w-full max-w-3xl mx-auto text-teal-700 text-sm">
 				<div className="flex flex-col md:flex-row items-center justify-between gap-6">
 					
-					{/* Sección izquierda: texto */}
 					<div className="text-left space-y-2">
 						<p>
 							Desarrollado por <b> Yubini Emanuel Pérez Oajaca </b> · 12/11/2025

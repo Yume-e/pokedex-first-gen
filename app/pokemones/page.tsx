@@ -176,7 +176,7 @@ export default function Home() {
           <Link href="/documentation"
             className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white font-semibold py-2 px-6 rounded-full transition duration-200 shadow-md"
           >
-            Contáctame
+            Contactame
             <FaArrowUpRightFromSquare className="text-white text-lg " />
           </Link>
         </div>
