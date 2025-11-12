@@ -22,10 +22,22 @@ export default async function Page(
       />
 
       <div className="bg-white rounded-2xl shadow-md p-6 w-full max-w-md text-gray-800">
-        <p><b>ID:</b> {pokemon.id}</p>
-        <p><b>Altura:</b> {pokemon.height}</p>
-        <p><b>Peso:</b> {pokemon.weight}</p>
-        <p><b>Tipos:</b> {pokemon.types.map((t: any) => t.type.name).join(", ")}</p>
+        <p>
+          <b>ID:</b> {pokemon.id}
+        </p>
+
+        <p>
+          <b>Altura:</b> {pokemon.height}
+        </p>
+
+        <p>
+          <b>Peso:</b> {pokemon.weight}
+        </p>
+
+        <p>
+          <b>Tipos:</b> {pokemon.types.map((t: any) => t.type.name).join(", ")}
+        </p>
+        
       </div>
     </div>
   );
