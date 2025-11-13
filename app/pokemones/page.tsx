@@ -135,7 +135,6 @@ export default function Home() {
                       className="p-4 py-6 rounded-2xl bg-white text-black shadow-md
                       hover:shadow-lg transition duration-200 hover:scale-104 active:scale-110"
                       key={pokemon.name}
-                      
                     >
                       <label>{pokemon.name}</label>
                     </Link>
@@ -173,7 +172,7 @@ export default function Home() {
             Proyecto creado con Next.js + Tailwind CSS · Pokedex de Kanto
           </p>
 
-          <Link href="/documentation"
+          <Link href="/pokemones/documentation"
             className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white font-semibold py-2 px-6 rounded-full transition duration-200 shadow-md"
           >
             Contactame
