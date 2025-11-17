@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { notFound } from "next/navigation";
 import { BsSearch } from "react-icons/bs";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import Link from "next/link";
@@ -63,7 +62,9 @@ export default function Home() {
       })
 
     }
+
     setPokemonData(list);//lo guarda en el metodo "setPokemonData"
+    
   }
 
   /**
@@ -88,7 +89,7 @@ export default function Home() {
   }, [query])
 
   return (
-    <div className='bg-emerald-100 shadow-xl py-4 mb-8 '>
+    <div className='min-h-screen bg-emerald-100 py-12'>
 
         <h1 className='text-teal-600 text-3xl font-bold text-center'>
           Pokedex de Kanto
@@ -102,7 +103,7 @@ export default function Home() {
           <BsSearch className='text-gray-500 text-lg absolute left-3' />
           <input
             type="text"
-            className='w-full pl-10 pr-4 py-3 text-gray-700 rounded-full focus:outline-none'
+            className='w-full pl-8 pr-4 py-3 text-gray-700 rounded-full focus:outline-none'
             onChange={(e) => setQuery(e.currentTarget.value)}
             placeholder='Buscar pokemon...'
           />
@@ -117,7 +118,7 @@ export default function Home() {
 
               if (!filtred) {
                 return (
-                  <Link 
+                  <Link
                     href={`/pokemones/${pokemon.name}`}
                     className="p-4 py-6 rounded-2xl bg-white text-black shadow-md 
                     hover:shadow-lg transition duration-200 hover:scale-104 active:scale-110"
@@ -156,7 +157,7 @@ export default function Home() {
 
           <button 
             className='bg-teal-400 text-white font-semibold py-2 px-4 rounded-lg hover:shadow-lg transition duration-200 hover:scale-104 active:scale-110'
-            onClick={() => setPage(page + 1)}
+            onClick={() => setPage(page < 7 ? page + 1 :7)}
           > 
             Siguiente 
           </button>
@@ -171,12 +172,6 @@ export default function Home() {
             Proyecto creado con Next.js + Tailwind CSS · Pokedex de Kanto
           </p>
 
-          <Link href="/pokemones/documentation"
-            className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white font-semibold py-2 px-6 rounded-full transition duration-200 shadow-md"
-          >
-            Contactame
-            <FaArrowUpRightFromSquare className="text-white text-lg " />
-          </Link>
         </div>
       </footer>
 
